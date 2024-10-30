@@ -21,11 +21,11 @@ public class Consumer implements Runnable {
                 waiter.bookTable(this.id);
                 System.out.println("User from pair: " + this.id + " eats");
                 Thread.sleep((int) Math.floor(Math.random() * 5000));
+                System.out.println("User from pair: " + this.id + " ends eating");
                 waiter.releaseTable();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("User from pair: " + this.id + " ends eating");
         }
     }
 

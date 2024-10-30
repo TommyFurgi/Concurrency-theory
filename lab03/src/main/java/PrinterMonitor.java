@@ -4,12 +4,12 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class PrinterMonitor {
     private final Lock lock = new ReentrantLock();
-    private Condition printers;
+    private Condition condition;
     private int printersNumber;
     private boolean[] isPrinterLocked;
 
     public PrinterMonitor(int printersNumber) {
-        this.printers = lock.newCondition();
+        this.condition = lock.newCondition();
         this.printersNumber = printersNumber;
         this.isPrinterLocked = new boolean[printersNumber];
     }
@@ -18,7 +18,7 @@ public class PrinterMonitor {
         lock.lock();
         try {
             while (this.printersNumber <= 0) {
-                printers.await();
+                condition.await();
             }
             int printer_id = -1;
             for (int i = 0; i < isPrinterLocked.length; i++) {
@@ -40,7 +40,7 @@ public class PrinterMonitor {
         try {
             isPrinterLocked[id] = false;
             printersNumber++;
-            printers.signal();
+            condition.signal();
         } finally {
             lock.unlock();
         }

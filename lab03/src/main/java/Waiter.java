@@ -29,9 +29,8 @@ public class Waiter {
             }
             if (waiting[number] == 0) {
                 waiting[number] = 1;
-                while (waiting[number] == 1) {
-                    pairs[number].await();
-                }
+                pairs[number].await();
+
             } else {
                 waiting[number] = 0;
                 consumersOnTable = 2;

@@ -1,6 +1,6 @@
 # Concurrency-theory
 
-## Overwiew
+## Overview
 
 This repository contains resources and task implementations for the Concurrency Theory course at AGH University of Science and Technology in Kraków in the academic year 2024/2025. The course covers fundamental concepts in concurrency, focusing on synchronization, process communication, and algorithmic approaches to concurrent programming.
 

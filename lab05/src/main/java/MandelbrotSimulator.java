@@ -26,24 +26,15 @@ public class MandelbrotSimulator {
         ExecutorService threadPool = Executors.newFixedThreadPool(threadNumber);
         List<Future<Integer>> futures = new ArrayList<>();
 
-        if (taskNumber != (height * width)) {
-            int pixelsPerTask = (height * width) / taskNumber;
-            for (int i = 0; i < taskNumber; i++) {
-                int start = i * pixelsPerTask;
-                int end = (i == taskNumber - 1) ? (height * width) : start + pixelsPerTask;
+        int pixelsPerTask = (height * width) / taskNumber;
+        for (int i = 0; i < taskNumber; i++) {
+            int start = i * pixelsPerTask;
+            int end = (i == taskNumber - 1) ? (height * width) : start + pixelsPerTask;
 
-                MandelbrotCalculator calculator = new MandelbrotCalculator(
-                        start, end, width, height, maxIter, zoom, image
-                );
-                futures.add(threadPool.submit(calculator));
-            }
-        } else {
-            for (int x = 0; x < (height * width); x++) {
-                MandelbrotCalculator calculator = new MandelbrotCalculator(
-                        x, x + 1, width, height, maxIter, zoom, image
-                );
-                futures.add(threadPool.submit(calculator));
-            }
+            MandelbrotCalculator calculator = new MandelbrotCalculator(
+                    start, end, width, height, maxIter, zoom, image
+            );
+            futures.add(threadPool.submit(calculator));
         }
 
         for (Future<Integer> future : futures) {

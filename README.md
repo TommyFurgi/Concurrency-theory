@@ -6,7 +6,7 @@ This repository contains resources and task implementations for the Concurrency 
 
 ## Covered topics
 
-#### **1. Java**
+### **1. Java**
 
 - [Lab 1](/lab01/) - Working with **threads**  
 - [Lab 2](/lab02/) - Implementing **semaphores**  
@@ -15,7 +15,7 @@ This repository contains resources and task implementations for the Concurrency 
 - [Lab 5](/lab05/) - Managing tasks in a **thread pool**  
 
 ---
-## **2. JavaScript**
+### **2. JavaScript**
 
 - [Lab 6](/lab06/) - Introduction to **Node.js**  
 - [Lab 7](/lab07/) - Solving the **dining philosophers problem**  

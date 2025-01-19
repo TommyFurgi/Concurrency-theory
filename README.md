@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains resources and task implementations for the Concurrency Theory course at AGH University of Science and Technology in Cracow in the academic year 2024/2025. The course covers fundamental concepts in concurrency, focusing on synchronization, process communication, and algorithmic approaches to concurrent programming.
+This repository contains resources and implementations for the **Concurrency Theory** course at AGH University of Science and Technology in Cracow for the academic year 2024/2025. The course explores key concepts in concurrency, focusing on synchronization, inter-process communication, and algorithmic solutions for concurrent programming challenges.
 
 ## Covered topics
 
@@ -21,9 +21,26 @@ This repository contains resources and task implementations for the Concurrency 
 - [Lab 7](/lab07/) - Solving the **dining philosophers problem**  
 
 ---
+### **3. Theoretical Concepts**
+
+- [Lab 8](/lab08/) - Modeling and analyzing **Petri Nets**
+
+---
+### **4. Kotlin**
+
+- [Lab 9](/lab09/) - Solving the **producer-consumer** problem and implementing a **production line** using CSP
+
+---
+### **5. Scala**
+
+- [Lab 10](/lab10/) - Working with **futures** for asynchronous task processing
+
+---
 
 ## Technologies
 
 **Programming Languages:** 
 * Java  
 * JavaScript  
+* Kotlin
+* Scala
